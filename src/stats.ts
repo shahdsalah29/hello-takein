@@ -6,6 +6,9 @@ export interface StatsSummary {
 }
 
 export function summarize(values: number[]): StatsSummary {
+  if (values.length === 0) {
+    throw new Error("Cannot summarize an empty array");
+  }
   const count = values.length;
 
   const total = values.reduce((sum, value) => sum + value, 0);
