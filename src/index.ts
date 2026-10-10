@@ -15,7 +15,7 @@ async function main() {
 
   try {
     const user = await fetchUser(1);
-console.log(`User: ${user.name} <${user.email}>`);
+    console.log(`User: ${user.name} <${user.email}>`);
   } catch (error) {
     console.error("Something went wrong:", (error as Error).message);
   }
